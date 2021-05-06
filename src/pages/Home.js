@@ -10,7 +10,8 @@ export const Home = () => {
         the web application is still work in progress you can still check out
         the tools below
       </p>
-      <Link to='./editor'>Editor</Link>
+      <Link to='./editor'>Editor</Link> <br></br>
+      <Link to='./compiler'>Compiler</Link>
     </div>
   );
 };
