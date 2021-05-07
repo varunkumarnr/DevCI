@@ -37,6 +37,7 @@ export const CodeCompiler = ({ displayName, language, value, onChange }) => {
         onBeforeChange={handleChange}
         value={value}
         className='code-mirror-wrapper'
+        id='source'
         options={{
           lineWrapping: true,
           lint: true,

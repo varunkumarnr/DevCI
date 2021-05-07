@@ -21,7 +21,7 @@ function Editor() {
   }, [html, css, js]);
   return (
     <>
-      <div className='panel top-panel'>
+      <div className='top-panel panel'>
         <Compiler
           language='xml'
           displayName='HTML'

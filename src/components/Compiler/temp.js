@@ -1,4 +1,4 @@
-const JSCODE =
+export const JSCODE =
   `
 //this is Node Js template
 
@@ -8,14 +8,14 @@ function greet(name) {
 greet("world");
 }
 `.trim() + "\n";
-const PYCODE =
+export const PYCODE =
   `
 #this is python template
 def greet(name):
     print(f"Hello,{name}!")
 greet("!world")
 `.trim() + "\n";
-const CPPCODE =
+export const CPPCODE =
   `
 // This is C++ tenplate
 #include <iostream>
@@ -27,7 +27,7 @@ int main() {
     return 0;
 }
 `.trim() + "\n";
-const RBCODE =
+export const RBCODE =
   `
 # This is the Ruby template
 def greet(name)
@@ -36,7 +36,7 @@ end
 greet('world')
 `.trim() + "\n";
 
-const LUACODE =
+export const LUACODE =
   `
 -- This is the Lua template
 function greet(name)
