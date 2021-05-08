@@ -12,7 +12,13 @@ html {
   flex-grow: 1;
   overflow: hidden;
 }
-
+.editor-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(22, 5%, 13%);
+  color: white;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
 #source {
   width: 100% !important;
   background: #cccccc52;

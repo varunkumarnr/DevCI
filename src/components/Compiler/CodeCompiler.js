@@ -23,15 +23,17 @@ require("codemirror/addon/fold/foldgutter.css");
 require("codemirror/addon/fold/brace-fold");
 require("codemirror/addon/fold/comment-fold");
 require("codemirror/addon/fold/indent-fold");
-
 export const CodeCompiler = ({ displayName, language, value, onChange }) => {
   const handleChange = (editor, data, value) => {
     onChange(value);
   };
+  // const dispalynameChange = (displayName) => {
+  //   onChange(displayName);
+  // };
 
   return (
     <div>
-      <div className='editor-title'>{displayName}</div>
+      <div className='editor-title'>CODE HERE</div>
 
       <ControlledEditor
         onBeforeChange={handleChange}

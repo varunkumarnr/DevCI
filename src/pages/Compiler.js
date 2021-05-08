@@ -2,14 +2,35 @@ import React, { useState, useEffect } from "react";
 import { CodeCompiler } from "../components/Compiler/CodeCompiler";
 import useLocalStorage from "../components/hooks/useLocalStorage";
 import "../Styles/Compiler.css";
-import { PYCODE } from "../components/Compiler/temp";
+import {
+  PYCODE,
+  CPPCODE,
+  RBCODE,
+  LUACODE,
+  JSCODE,
+} from "../components/Compiler/temp";
+
 export const Compiler = () => {
+  const arr = [
+    "cpython-head",
+    "nodejs-head",
+    "gcc-head",
+    "ruby-head",
+    "lua-5.4.0",
+  ];
+  const languages = ["python", "java script", "c++", "ruby", "lua"];
+  const temp = [PYCODE, JSCODE, CPPCODE, RBCODE, LUACODE];
   const [langauge, setLanguage] = useState("cpython-head");
   const [python, setPython] = useLocalStorage("PYCODE", "");
-  const [lua, setLua] = useLocalStorage("LUACODE", "");
-  const [cpp, setCPP] = useLocalStorage("CPP", "");
-  const [javascript, setJavaScript] = useLocalStorage("javas");
-  const [ruby, setRuby] = useLocalStorage("ruby", "");
+  const [id, setid] = useState("python");
+  const [tempcode, setTempCode] = useState(PYCODE);
+  const lang = arr.map((lang) => lang);
+  const handleAddrTypeChange = (e) => {
+    setLanguage(lang[e.target.value]);
+    setid(languages[e.target.value]);
+    setTempCode(temp[e.target.value]);
+    console.log(tempcode);
+  };
   const fetchData = async (code, lang) => {
     var msg, newData, req;
     req = await fetch(
@@ -36,24 +57,22 @@ export const Compiler = () => {
   };
 
   useEffect(() => {
-    const timeOut = setTimeout(() => {
-      Submit();
-    }, 250);
+    const timeOut = setTimeout(() => {}, 250);
     return () => clearTimeout(timeOut);
-  }, []);
+  });
   return (
     <div className='row container-fluid compiler'>
-      <div className='col-6'>
+      <div className='col-xs-12 col-sm-12 col-md-6'>
         <div className='top-panel'>
           <CodeCompiler
             langauge='python'
-            displayName='Python'
-            value={python == "" ? PYCODE : python}
+            displayName='python'
+            value={python === "" ? tempcode : python}
             onChange={setPython}
           />
         </div>
       </div>
-      <div className='col-6'>
+      <div className=' col-xs-12 col-sm-12 col-md-6'>
         <button
           id='runbtn'
           className='btn btn-success'
@@ -64,6 +83,17 @@ export const Compiler = () => {
         >
           Run
         </button>
+        <select
+          onChange={(e) => handleAddrTypeChange(e)}
+          className='custom-select'
+        >
+          {lang.map((address, key) => (
+            <option id='key' key={key} value={key}>
+              {address}
+            </option>
+          ))}
+        </select>
+        <p>Language : {id}</p>
         <br></br>
         <strong>Standard Output</strong>
         <div id='msg-con' className='container'>

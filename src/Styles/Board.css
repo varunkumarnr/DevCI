@@ -1,0 +1,40 @@
+.board {
+  background-color: white;
+  cursor: crosshair;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.controls {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+canvas {
+  min-height: 500px;
+}
+
+.controls .fa-icon {
+  cursor: pointer;
+  font-size: 3rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 30%;
+  box-shadow: 0 0 6px black;
+  z-index: 2;
+  color: #071a54;
+  background: linear-gradient(
+    90deg,
+    rgba(174, 238, 237, 1) 0%,
+    rgba(181, 23, 23, 1) 100%
+  );
+}
