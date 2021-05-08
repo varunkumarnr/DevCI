@@ -12,6 +12,8 @@ export const Home = () => {
       </p>
       <Link to='./editor'>Editor</Link> <br></br>
       <Link to='./compiler'>Compiler</Link>
+      <br></br>
+      <Link to='./board'>White Board</Link>
     </div>
   );
 };
