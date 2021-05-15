@@ -20,10 +20,11 @@ export const Compiler = () => {
   ];
   const languages = ["python", "java script", "c++", "ruby", "lua"];
   const temp = [PYCODE, JSCODE, CPPCODE, RBCODE, LUACODE];
+  const [tempcode, setTempCode] = useState(PYCODE);
   const [langauge, setLanguage] = useState("cpython-head");
   const [python, setPython] = useLocalStorage("PYCODE", "");
   const [id, setid] = useState("python");
-  const [tempcode, setTempCode] = useState(PYCODE);
+
   const lang = arr.map((lang) => lang);
   const handleAddrTypeChange = (e) => {
     setLanguage(lang[e.target.value]);

@@ -79,6 +79,7 @@ function WhiteBoard() {
         ref={canvasRef}
         onMouseDown={handleMouseDown}
         onTouchStart={handleMouseUp}
+        onTouchMove={handleMouseMove}
         onTouchEnd={handleMouseDown}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}

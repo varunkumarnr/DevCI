@@ -4,6 +4,7 @@ import { Compiler } from "./pages/Compiler";
 import Editor from "./pages/Editor";
 import { Home } from "./pages/Home";
 import WhilteBoard from "./pages/WhilteBoard";
+import { Visulizer } from "./pages/Visulizer";
 export const Routes = () => {
   return (
     <Router>
@@ -11,6 +12,7 @@ export const Routes = () => {
       <Route path='/editor' component={Editor}></Route>
       <Route path='/compiler' component={Compiler}></Route>
       <Route path='/board' component={WhilteBoard}></Route>
+      <Route path='/Visulizer' component={Visulizer}></Route>
     </Router>
   );
 };
