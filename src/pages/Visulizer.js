@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 export const Visulizer = () => {
-  const arr = [];
   // const [python, setPython] = useState("");
+  const [links, setLinks] = useState("");
   const temp = 'print("hello world")';
   const [code, setCode] = useState(temp);
 
@@ -11,6 +11,8 @@ export const Visulizer = () => {
     var main = document.getElementById("mainCode");
     main.innerHTML += `<iframe id="codeEx" class="codeEx" width="900" height="300" frameborder="0" src=${link}></iframe>`;
     console.log(link);
+    setLinks(link);
+
     var c = document.getElementById("codeEx");
     if (c.className.includes("active")) {
       return;
@@ -18,7 +20,8 @@ export const Visulizer = () => {
       c.className = c.className + " active";
     }
   };
-  const fetchData = async () => {
+  console.log(links);
+  const fetchData = () => {
     let value = code;
     value = value.split("\n");
     value = value.join("<br>");
@@ -27,6 +30,7 @@ export const Visulizer = () => {
     console.log(dataForm);
     fetch(`https://vealizeapi.root.sx/code/python`, {
       method: "post",
+      // mode: "no-cors",
       body: dataForm,
     })
       .then((e) => e.json())
@@ -36,8 +40,8 @@ export const Visulizer = () => {
     setCode(e.target.value);
   };
   // useEffect(() => {
-  //   console.log(code);
-  // }, [code]);
+  //   setLinks();
+  // }, [links]);
   return (
     <div>
       <div className='mainCode' id='mainCode'>
@@ -60,6 +64,7 @@ export const Visulizer = () => {
         >
           Submit
         </button>
+        <p onChange={setLinks}>{links}</p>
         <iframe
           title=' '
           id='codeEx'
