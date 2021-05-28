@@ -4,7 +4,8 @@ import "codemirror/lib/codemirror.css";
 import "codemirror/theme/material.css";
 
 import "codemirror/mode/xml/xml";
-import "codemirror/mode/javascript/javascript";
+import "codemirror/lib/codemirror.css";
+import "codemirror/theme/material.css";
 import "codemirror/mode/css/css";
 
 import { Controlled as ControlledEditor } from "react-codemirror2";

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../Styles/Board.css";
 import { Controls } from "../components/WhiteBoard/Controls";
-
 function WhiteBoard() {
   const canvasRef = React.useRef(null);
   const parentRef = React.useRef(null);
@@ -11,16 +10,13 @@ function WhiteBoard() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [color, setColor] = useState("#000000");
   const [erase, setEraseState] = useState(false);
-
   useEffect(() => {
     let canv = canvasRef.current;
     canv.width = parentRef.current.offsetWidth;
     canv.height = parentRef.current.offsetHeight;
-
     let canvCtx = canv.getContext("2d");
     setCtx(canvCtx);
   }, [ctx]);
-
   function handleMouseDown(e) {
     setDrawing(true);
     let offset = canvasRef.current.getBoundingClientRect();

@@ -5,6 +5,7 @@ import Editor from "./pages/Editor";
 import { Home } from "./pages/Home";
 import WhilteBoard from "./pages/WhilteBoard";
 import { Visulizer } from "./pages/Visulizer";
+import { OptimizerPage } from "./pages/OptimizerPage";
 export const Routes = () => {
   return (
     <Router>
@@ -13,6 +14,7 @@ export const Routes = () => {
       <Route path='/compiler' component={Compiler}></Route>
       <Route path='/board' component={WhilteBoard}></Route>
       <Route path='/Visulizer' component={Visulizer}></Route>
+      <Route path='/optimizer' component={OptimizerPage}></Route>
     </Router>
   );
 };

@@ -30,11 +30,9 @@ export const CodeCompiler = ({ displayName, language, value, onChange }) => {
   // const dispalynameChange = (displayName) => {
   //   onChange(displayName);
   // };
-
   return (
     <div>
       <div className='editor-title'>CODE HERE</div>
-
       <ControlledEditor
         onBeforeChange={handleChange}
         value={value}
