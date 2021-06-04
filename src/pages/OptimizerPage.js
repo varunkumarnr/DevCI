@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import useLocalStorage from "../components/hooks/useLocalStorage";
 import { minify } from "terser";
 import { Optimizer } from "../components/Optimizer/Optimizer";
+import "../Styles/Optimizer.css";
 export const OptimizerPage = () => {
   const [code, setCode] = useLocalStorage("OPTCODE", "");
   // const [temp, setTemp] = useState("");
@@ -22,6 +23,7 @@ export const OptimizerPage = () => {
         console.log(result.error, "this");
       } else {
         console.log(result.code);
+        document.getElementById("msg").innerHTML = result.code;
       }
     }
     document.getElementById("runbtn").innerHTML = "Optimize";
@@ -35,6 +37,7 @@ export const OptimizerPage = () => {
     <div className='row'>
       <div className='col-xs-12 col-sm-12 col-md-6'>
         <div className='top-panel'>
+          <div className='editor-title'>CODE HERE</div>
           <Optimizer
             langauge='javaScript'
             displayName='Optimzer'
@@ -61,6 +64,12 @@ export const OptimizerPage = () => {
         >
           Optimize
         </button>
+      </div>
+      <div className='col-xs-12 col-sm-12 col-md-6'>
+        <div className='top-panel'>
+          <div className='editor-title'>Optimized code</div>
+        </div>
+        <div id='msg'></div>
       </div>
     </div>
   );

@@ -10,7 +10,6 @@ export const Optimizer = ({ displayName, language, value, onChange }) => {
   };
   return (
     <div>
-      <div className='editor-title'>CODE HERE</div>
       <ControlledEditor
         onBeforeChange={handleChange}
         value={value}

@@ -14,6 +14,8 @@ export const Home = () => {
       <Link to='./compiler'>Compiler</Link>
       <br></br>
       <Link to='./board'>White Board</Link>
+      <br></br>
+      <Link to='./optimizer'>Optimizer</Link>
     </div>
   );
 };
