@@ -1,5 +1,6 @@
 import React from "react";
 import "./navbar.css";
+import "../../js/navabar";
 export const Navbar = () => {
   return (
     <div>
@@ -7,22 +8,22 @@ export const Navbar = () => {
         <h1>DevCI</h1>
         <ul>
           <li>
-            <a className='h active' id='homeNav' href='#'>
+            <a className='h active' id='homeNav' href='#home'>
               Home
             </a>
           </li>
           <li>
-            <a className='h' id='AboutNav' href='#'>
+            <a className='h' id='AboutNav' href='#about'>
               About
             </a>
           </li>
           <li>
-            <a className='h' id='FeaturesNav' href='#'>
+            <a className='h' id='FeaturesNav' href='#features'>
               Features
             </a>
           </li>
           <li>
-            <a className='h' id='ContactNav' href='#'>
+            <a className='h' id='ContactNav' href='#contact'>
               Contact
             </a>
           </li>

@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
 header {
   display: flex;
   align-items: center;
@@ -30,9 +34,9 @@ header ul li {
   cursor: pointer;
 }
 header ul li a {
-  text-decoration: none !important;
+  text-decoration: none;
   font-size: 18px;
-  color: #fff !important;
+  color: #fff;
 }
 header ul li a:after {
   transition: all ease-in-out 0.2s;
@@ -55,4 +59,20 @@ header ul li .h.active {
 
 header ul li .h.active:after {
   height: 0px;
+}
+.make-navbar-bg {
+  background-color: white;
+  -webkit-box-shadow: 0 20px 25px -6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 25px -6px rgba(0, 0, 0, 0.3);
+  color: #000;
+}
+.add-h {
+  color: #000;
+}
+.h:hover {
+  color: #fff !important;
+  text-decoration: none;
+}
+.add-h:hover {
+  color: #000 !important;
 }
