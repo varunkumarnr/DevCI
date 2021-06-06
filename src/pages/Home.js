@@ -9,7 +9,7 @@ export const Home = () => {
   return (
     <div>
       <Navbar />
-      <h3>
+      {/* <h3>
         welcome to <b>DevCI</b>
       </h3>
       <p>
@@ -21,7 +21,7 @@ export const Home = () => {
       <br></br>
       <Link to='./board'>White Board</Link>
       <br></br>
-      <Link to='./optimizer'>Optimizer</Link>
+      <Link to='./optimizer'>Optimizer</Link> */}
       <HomeComp />
       <About />
       <Features />

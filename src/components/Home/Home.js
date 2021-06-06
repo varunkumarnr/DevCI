@@ -1,5 +1,14 @@
 import React from "react";
-
+import "./Home.css";
 export const HomeComp = () => {
-  return <div id='Home'>Home</div>;
+  return (
+    <div id='content home' className='content'>
+      <h1 id='homepagetitle'>
+        DEV<span id='homepagetitlesub'>CI</span>
+      </h1>
+      <p>All Your Developer Needs At One Place</p>
+      <p id='stuff'>Because we hate switching tabs</p>
+      <button>Get Started</button>
+    </div>
+  );
 };
