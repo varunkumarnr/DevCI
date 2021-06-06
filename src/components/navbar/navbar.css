@@ -48,7 +48,6 @@ header ul li a:after {
   display: block;
   height: 2px;
   width: 0;
-  color: #fff;
   background: #ff0158;
 }
 header ul li a:hover:after {

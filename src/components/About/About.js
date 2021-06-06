@@ -17,7 +17,14 @@ export const About = () => {
           </p>
           <h3>
             Like DevCI? star the project{" "}
-            <a href='https://github.com/varunkumarnr/DevCI'>Github</a>
+            <span>
+              <a
+                className='aboutLink'
+                href='https://github.com/varunkumarnr/DevCI'
+              >
+                Github
+              </a>
+            </span>
           </h3>
         </div>
 

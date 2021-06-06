@@ -25,8 +25,18 @@
   font-weight: 400;
   margin-top: 20px;
 }
+.aboutLink {
+  color: #e92469;
+}
+
+.aboutDoc h3 span a:hover {
+  color: #e92469;
+}
 @media (max-width: 768px) {
   .aboutImg {
     display: none;
+  }
+  .about {
+    margin-left: 30px;
   }
 }
