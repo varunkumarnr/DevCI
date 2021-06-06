@@ -21,7 +21,7 @@
 .content p {
   bottom: 40px;
   position: relative;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 500;
 }
 .content #stuff {
@@ -41,9 +41,11 @@
   font-weight: 600;
   text-align: center;
   cursor: pointer;
+  transition: transform 0.2s;
 }
 .content button:hover {
   background: #f5266e;
   transition: 0.5s;
+  transform: scale(1.08);
   color: #f2f2f2;
 }

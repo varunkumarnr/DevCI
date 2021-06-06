@@ -1,0 +1,32 @@
+.about {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+.about h1 {
+  font-size: 3em;
+  font-weight: 200;
+}
+.about .aboutTitle {
+  font-weight: 700;
+  border-bottom: 5px solid #ff0158;
+  font-size: 4em;
+  max-width: 4.7em;
+}
+.about p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.about h2 {
+  font-weight: 400;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .aboutImg {
+    display: none;
+  }
+}

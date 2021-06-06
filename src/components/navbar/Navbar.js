@@ -10,7 +10,7 @@ export const Navbar = () => {
         </h1>
         <ul>
           <li>
-            <a className='h active' id='homeNav' href='#home'>
+            <a className='h' id='homeNav' href='#home'>
               Home
             </a>
           </li>

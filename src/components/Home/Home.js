@@ -7,7 +7,7 @@ export const HomeComp = () => {
         DEV<span id='homepagetitlesub'>CI</span>
       </h1>
       <p>All Your Developer Needs At One Place</p>
-      <p id='stuff'>Because we hate switching tabs</p>
+      <p id='stuff'>No Login get in start coding</p>
       <button>Get Started</button>
     </div>
   );
