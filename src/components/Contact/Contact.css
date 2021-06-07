@@ -1,0 +1,61 @@
+.contact {
+  margin-top: 100px;
+  height: 80vh;
+}
+.contactTitle {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.contactTitle h1 {
+  font-size: 3.5em;
+}
+.contactTitle p {
+  font-weight: 300;
+  font-size: 18px;
+}
+.contactTitle p span {
+  color: #ff0158;
+}
+.contactBlock form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 40px;
+}
+.contactBlock input {
+  margin-bottom: 5px;
+  outline: none;
+  border: none;
+  background: rgb(245, 245, 245);
+  padding: 20px;
+  width: 800px;
+  height: 60px;
+  border-radius: 5px;
+}
+.contactBlock textarea {
+  margin-bottom: 5px;
+  outline: none;
+  border: none;
+  background: rgb(245, 245, 245);
+  padding: 20px;
+  width: 800px;
+  height: 200px;
+  border-radius: 5px;
+}
+.contactBlock button {
+  margin-top: 20px;
+  width: 200px;
+  height: 55px;
+  background: #ff0158;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  font-size: 17px;
+  outline: none;
+  border: none;
+}

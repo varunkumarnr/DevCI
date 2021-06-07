@@ -10,11 +10,6 @@ export const Navbar = () => {
         </h1>
         <ul>
           <li>
-            <a className='h' id='homeNav' href='#home'>
-              Home
-            </a>
-          </li>
-          <li>
             <a className='h' id='AboutNav' href='#about'>
               About
             </a>
@@ -22,6 +17,11 @@ export const Navbar = () => {
           <li>
             <a className='h' id='FeaturesNav' href='#features'>
               Features
+            </a>
+          </li>
+          <li>
+            <a className='h' id='toolsNav' href='#home'>
+              Tools
             </a>
           </li>
           <li>
