@@ -17,7 +17,7 @@ export const Features = () => {
             <Link to='./editor'>Take me there</Link>
           </button>
         </div>
-        <div className='featureCard only-pc'>
+        <div className='featureCard only-pc '>
           <h2>Compiler</h2>
           <p>
             A MultiLanguage online Compiler. That supports
@@ -27,7 +27,7 @@ export const Features = () => {
             <Link to='./compiler'>Take me there</Link>
           </button>
         </div>
-        <div className='featureCard only-pc'>
+        <div className='featureCard only-pc '>
           <h2>Optimizer</h2>
           <p>
             A JavaScript code optimizer that optimizes because speed plays a
@@ -37,14 +37,14 @@ export const Features = () => {
             <Link to='./optimizer'>Take me there</Link>
           </button>
         </div>
-        <div className='featureCard only-pc'>
+        <div className='featureCard only-pc only-md'>
           <h2>White board</h2>
           <p>A white board for old "pen paper" style solving a problem</p>
           <button>
             <Link to='./board'>Take me there</Link>
           </button>
         </div>
-        <div className='featureCard only-pc'>
+        <div className='featureCard only-pc only-md'>
           <h2>Github Visulizer</h2>
           <p>Visulize your github repositories</p>
           <button>
