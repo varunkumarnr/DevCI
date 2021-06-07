@@ -5,6 +5,7 @@ import { About } from "../components/About/About";
 import { Contact } from "../components/Contact/Contact";
 import { Features } from "../components/Features/Features";
 import { Navbar } from "../components/navbar/Navbar";
+import { Footer } from "../components/Footer/Footer";
 export const Home = () => {
   return (
     <div>
@@ -26,6 +27,7 @@ export const Home = () => {
       <About />
       <Features />
       <Contact />
+      <Footer />
     </div>
   );
 };
