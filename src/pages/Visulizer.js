@@ -20,7 +20,6 @@ export const Visulizer = () => {
       c.className = c.className + " active";
     }
   };
-  console.log(links);
   const fetchData = () => {
     let value = code;
     value = value.split("\n");
@@ -28,13 +27,11 @@ export const Visulizer = () => {
     var dataForm = new FormData();
     dataForm.append("code", value);
     console.log(dataForm);
-    fetch(
-      `https://pythontutor.com/iframe-embed.html#code=${code}&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false`,
-      {
-        method: "post",
-        // mode: "no-cors",
-      }
-    )
+    fetch(`https://vealizeapi.root.sx/code/python`, {
+      method: "post",
+      // mode: "cors",
+      body: dataForm,
+    })
       .then((e) => e.json())
       .then((data) => editFrame(data));
   };
