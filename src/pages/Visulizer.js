@@ -28,11 +28,13 @@ export const Visulizer = () => {
     var dataForm = new FormData();
     dataForm.append("code", value);
     console.log(dataForm);
-    fetch(`https://vealizeapi.root.sx/code/python`, {
-      method: "post",
-      // mode: "no-cors",
-      body: dataForm,
-    })
+    fetch(
+      `https://pythontutor.com/iframe-embed.html#code=${code}&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false`,
+      {
+        method: "post",
+        // mode: "no-cors",
+      }
+    )
       .then((e) => e.json())
       .then((data) => editFrame(data));
   };
