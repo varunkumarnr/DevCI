@@ -36,7 +36,7 @@ function Editor() {
         />
         <Compiler
           language='javascript'
-          displayName='JavaScript'
+          displayName='JS'
           value={js}
           onChange={setJs}
         />

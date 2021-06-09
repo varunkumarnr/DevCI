@@ -13,6 +13,7 @@ export const Optimized = ({ value }) => {
           lineWrapping: true,
           lint: true,
           lineNumbers: true,
+          // scrollbarStyle: "overlay",
           theme: "material",
           autoCloseBrackets: true,
         }}

@@ -15,14 +15,14 @@ import "codemirror/theme/solarized.css";
 import "codemirror/theme/material.css";
 import "codemirror/theme/monokai.css";
 import "codemirror/theme/base16-light.css";
-require("codemirror/addon/edit/closebrackets");
-require("codemirror/addon/edit/matchbrackets");
-require("codemirror/addon/fold/foldcode");
-require("codemirror/addon/fold/foldgutter");
-require("codemirror/addon/fold/foldgutter.css");
-require("codemirror/addon/fold/brace-fold");
-require("codemirror/addon/fold/comment-fold");
-require("codemirror/addon/fold/indent-fold");
+// require("codemirror/addon/edit/closebrackets");
+// require("codemirror/addon/edit/matchbrackets");
+// require("codemirror/addon/fold/foldcode");
+// require("codemirror/addon/fold/foldgutter");
+// require("codemirror/addon/fold/foldgutter.css");
+// require("codemirror/addon/fold/brace-fold");
+// require("codemirror/addon/fold/comment-fold");
+// require("codemirror/addon/fold/indent-fold");
 export const CodeCompiler = ({ displayName, language, value, onChange }) => {
   const handleChange = (editor, data, value) => {
     onChange(value);
@@ -41,9 +41,8 @@ export const CodeCompiler = ({ displayName, language, value, onChange }) => {
         options={{
           lineWrapping: true,
           lint: true,
-          mode: language,
+          // mode: language,
           lineNumbers: true,
-          scrollbarStyle: "overlay",
           theme: "monokai",
           autoCloseBrackets: true,
         }}

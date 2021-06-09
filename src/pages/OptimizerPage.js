@@ -58,7 +58,7 @@ export const OptimizerPage = () => {
         </div>
         <button
           id='runbtn'
-          className='btn btn-success'
+          className='btn btn-success butn'
           type='button'
           onClick={() => {
             Submit();

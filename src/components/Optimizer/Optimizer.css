@@ -4,6 +4,11 @@
   height: 100%;
 }
 
+.butn {
+  position: absolute;
+  margin-top: 45px;
+  left: 20px;
+}
 .col,
 .col-1,
 .col-10,
@@ -79,7 +84,7 @@
 }
 .code-ide {
   padding-right: 3px;
-  height: 100vh;
+  height: 65vh;
 }
 .top-panel {
   height: 50vh;
