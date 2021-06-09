@@ -45,10 +45,10 @@ export const Features = () => {
           </button>
         </div>
         <div className='featureCard only-pc only-md'>
-          <h2>Github Visulizer</h2>
-          <p>Visulize your github repositories</p>
+          <h2>Code Visulizer</h2>
+          <p>Visulize your Code step by step</p>
           <button>
-            <Link to='./board'>Take me there</Link>
+            <Link to='./Visulizer'>Take me there</Link>
           </button>
         </div>
         {/* <div className='featureCard only-pc'>

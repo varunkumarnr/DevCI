@@ -31,7 +31,6 @@
 }
 .footerSocials .sm {
   margin-right: 100px;
-  cursor: pointer;
 }
 .footerSocials .sm {
   font-size: 1.5em;
@@ -41,6 +40,7 @@
 }
 .footerSocials .sm a {
   color: #fff;
+  cursor: pointer;
 }
 .footerSocials .fa-facebook-f:hover {
   color: rgb(21, 163, 250);
