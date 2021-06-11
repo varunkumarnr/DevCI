@@ -6,6 +6,7 @@ import { Home } from "./pages/Home";
 import WhilteBoard from "./pages/WhilteBoard";
 import { Visulizer } from "./pages/Visulizer";
 import { OptimizerPage } from "./pages/OptimizerPage";
+import { Todo } from "./components/todo/Todo";
 export const Routes = () => {
   return (
     <Router>
@@ -15,6 +16,7 @@ export const Routes = () => {
       <Route path='/board' component={WhilteBoard}></Route>
       <Route path='/Visulizer' component={Visulizer}></Route>
       <Route path='/optimizer' component={OptimizerPage}></Route>
+      <Route path='/todo' component={Todo}></Route>
     </Router>
   );
 };
