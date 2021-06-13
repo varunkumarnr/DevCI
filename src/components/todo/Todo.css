@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+.TodoTitle {
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.TodoDesc {
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.todo-input {
+  margin-bottom: 30px;
+  outline: none;
+  border: none;
+  background: rgb(245, 245, 245);
+  padding: 20px;
+  width: 35vw;
+  height: 60px;
+  border-radius: 5px;
+  margin-left: 50px;
+  border-radius: 40px;
+}
+.todo-button {
+  outline: none;
+  border: none;
+  height: 60px;
+  width: 10vw;
+  margin-left: 20px;
+  border-radius: 40px;
+  background: #ff0158;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  font-size: 17px;
+}
+.todo-button:hover {
+  background: #c71653;
+  transition: 0.5s;
+  color: #f2f2f2;
+}
+.todo-display {
+  display: flex;
+  margin-left: 50px;
+  justify-content: space-between;
+  width: 50vw;
+}
+.todoBtn {
+  width: 130px;
+  height: 40px;
+  background: #edeeef;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.todoBtn .active {
+  background: #ff0158;
+  color: #fff;
+}
+.todoBtn:hover {
+  background: #ff0158;
+  color: #fff;
+  transition: 0.5s;
+}
+.todo-item {
+  display: flex;
+  margin-left: 50px;
+  justify-content: space-between;
+  width: 90vw;
+  height: 50px;
+  background: #edeeef;
+  padding: 20px;
+  align-items: center;
+  border-radius: 10px;
+}
+.todoCheck {
+  height: 20px;
+  width: 20px;
+}
+.todo-item input:checked {
+  background: #ff0158;
+}
+@media (max-width: 772px) {
+  .todo-input {
+    width: 65vw;
+  }
+  .todo-button {
+    width: 20vw;
+  }
+  .todo-display {
+    margin-left: 30px;
+    width: 95vw;
+  }
+}

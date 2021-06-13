@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { Filter } from "./Filter";
 import { Item } from "./Item";
-
+import "./Todo.css";
 export const Todo = () => {
   const [input, setInput] = useState("");
   const [todo, setTodos] = useState([]);
   const [display, setDisplay] = useState([]);
-  console.log(todo);
+  // console.log(todo);
   useEffect(() => {
     setTodos(JSON.parse(localStorage.getItem("localStorageTodos")) || []);
     setDisplay(JSON.parse(localStorage.getItem("localStorageTodos")) || []);
@@ -26,7 +26,7 @@ export const Todo = () => {
       const data = [...todo, newTodos];
       setInput("");
       setLocalStorage(data);
-      console.log(data);
+      // console.log(data);
     }
   };
   const removeTodo = (id) => {
@@ -53,32 +53,38 @@ export const Todo = () => {
   };
   return (
     <div className='todo' id='todo'>
-      <h1>Todo List</h1>
-      <p>Plan ahead</p>
-      <form className='todo-form' onSubmit={addTodo}>
-        <input
-          type='text'
-          className='todo-input'
-          placeholder='Add task'
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button type='submit' className='todo-button'>
-          Add
-        </button>
-      </form>
-      <Filter all={all} active={active} done={done} />
-      <div>
-        {display.map((todo) => (
-          <Item
-            key={todo.id}
-            id={todo.id}
-            todos={todo.title}
-            completed={todo.completed}
-            removeTodo={removeTodo}
-            markComp={markComp}
-          />
-        ))}
+      <h1 className='TodoTitle'>Todo List</h1>
+      <p className='TodoDesc'>Plan ahead</p>
+      <div className='row'>
+        <div className='col-xs-12 col-sm-12 col-md-6'>
+          <form className='todo-form' onSubmit={addTodo}>
+            <input
+              type='text'
+              className='todo-input'
+              placeholder='Add task'
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+            />
+            <button type='submit' className='todo-button'>
+              Add
+            </button>
+          </form>
+
+          <Filter all={all} active={active} done={done} />
+          <div>
+            {display.map((todo) => (
+              <Item
+                key={todo.id}
+                id={todo.id}
+                todos={todo.title}
+                completed={todo.completed}
+                removeTodo={removeTodo}
+                markComp={markComp}
+              />
+            ))}
+          </div>
+        </div>
+        <div className='col-xs-12 col-sm-12 col-md-6'></div>
       </div>
     </div>
   );
