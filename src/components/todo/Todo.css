@@ -8,13 +8,18 @@
 }
 .TodoTitle {
   font-size: 2.5em;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
 }
+.TodoTitle span {
+  color: #ff0158;
+}
 .TodoDesc {
   font-size: 1em;
+  font-weight: 300;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,8 +78,7 @@
   margin-right: 30px;
   margin-bottom: 30px;
 }
-
-.todoBtn .active {
+.active {
   background: #ff0158;
   color: #fff;
 }
@@ -87,10 +91,11 @@
   display: flex;
   margin-left: 50px;
   justify-content: space-between;
-  width: 90vw;
+  width: 45vw;
   height: 50px;
   background: #edeeef;
   padding: 20px;
+  margin-bottom: 10px;
   align-items: center;
   border-radius: 10px;
 }
@@ -100,6 +105,20 @@
 }
 .todo-item input:checked {
   background: #ff0158;
+}
+.todo-img {
+  width: 45vw;
+}
+/* .fa-trash {
+  color: #c71653;
+  cursor: pointer;
+} */
+.bin-button {
+  padding: 10px;
+}
+.bin-button:hover {
+  cursor: pointer;
+  color: #ff0158;
 }
 @media (max-width: 772px) {
   .todo-input {
@@ -111,5 +130,8 @@
   .todo-display {
     margin-left: 30px;
     width: 95vw;
+  }
+  .todo-img {
+    display: none;
   }
 }

@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { Filter } from "./Filter";
 import { Item } from "./Item";
+import "../../js/todo";
 import "./Todo.css";
+import TodoImg from "../../images/todo.svg";
 export const Todo = () => {
   const [input, setInput] = useState("");
   const [todo, setTodos] = useState([]);
@@ -53,7 +55,9 @@ export const Todo = () => {
   };
   return (
     <div className='todo' id='todo'>
-      <h1 className='TodoTitle'>Todo List</h1>
+      <h1 className='TodoTitle'>
+        Todo <span>List</span>
+      </h1>
       <p className='TodoDesc'>Plan ahead</p>
       <div className='row'>
         <div className='col-xs-12 col-sm-12 col-md-6'>
@@ -69,7 +73,6 @@ export const Todo = () => {
               Add
             </button>
           </form>
-
           <Filter all={all} active={active} done={done} />
           <div>
             {display.map((todo) => (
@@ -84,7 +87,9 @@ export const Todo = () => {
             ))}
           </div>
         </div>
-        <div className='col-xs-12 col-sm-12 col-md-6'></div>
+        <div className='col-xs-12 col-sm-12 col-md-6'>
+          <img className='img-fluid todo-img' src={TodoImg} alt='todo' />
+        </div>
       </div>
     </div>
   );
