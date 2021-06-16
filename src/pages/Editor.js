@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Compiler from "../components/codecompiler/Compiler";
 import useLocalStorage from "../components/hooks/useLocalStorage";
+import { StackButton } from "../components/StackOverflow/StackButton";
 import "../Styles/editor.css";
 function Editor() {
   const [html, setHtml] = useLocalStorage("html", "");
@@ -21,6 +22,7 @@ function Editor() {
   }, [html, css, js]);
   return (
     <>
+      <StackButton />
       <div className='top-panel panel'>
         <Compiler
           language='xml'

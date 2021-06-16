@@ -4,6 +4,7 @@ import { minify } from "terser";
 import { Optimizer } from "../components/Optimizer/Optimizer";
 import "../components/Optimizer/Optimizer.css";
 import { Optimized } from "../components/Optimizer/Optimized";
+import { StackButton } from "../components/StackOverflow/StackButton";
 export const OptimizerPage = () => {
   const [code, setCode] = useLocalStorage("OPTCODE", "");
   const [optimizedCode, setOptimizedCode] = useState("");
@@ -37,6 +38,7 @@ export const OptimizerPage = () => {
   };
   return (
     <div className='row'>
+      <StackButton />
       <div className='col-xs-12 col-sm-12 col-md-6 code-ide'>
         <div className='top-panel'>
           <div className='editor-title'>CODE HERE</div>

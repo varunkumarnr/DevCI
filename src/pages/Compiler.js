@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CodeCompiler } from "../components/Compiler/CodeCompiler";
 import useLocalStorage from "../components/hooks/useLocalStorage";
+import { StackButton } from "../components/StackOverflow/StackButton";
 import "../Styles/Compiler.css";
 import {
   PYCODE,
@@ -63,6 +64,7 @@ export const Compiler = () => {
   });
   return (
     <div className='row container-fluid compiler'>
+      <StackButton />
       <div className='col-xs-12 col-sm-12 col-md-6'>
         <div className='top-panel'>
           <CodeCompiler

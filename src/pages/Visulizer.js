@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../Styles/Visualizer.css";
 import Bg from "../images/visuliser-bg.svg";
+import { StackButton } from "../components/StackOverflow/StackButton";
 export const Visulizer = () => {
   // const [python, setPython] = useState("");
   const [links, setLinks] = useState("");
@@ -45,6 +46,7 @@ export const Visulizer = () => {
   // }, []);
   return (
     <div id='main' className='main'>
+      <StackButton />
       <div className='mainTitle'>
         <h1>Code Execution Visualizer</h1>
       </div>

@@ -120,6 +120,11 @@
   cursor: pointer;
   color: #ff0158;
 }
+.todoCheck:checked + .todolist {
+  color: #857e7e;
+  text-decoration: line-through;
+}
+
 @media (max-width: 772px) {
   .todo-input {
     width: 65vw;
@@ -133,5 +138,8 @@
   }
   .todo-img {
     display: none;
+  }
+  .todo-item {
+    width: 95vw;
   }
 }
